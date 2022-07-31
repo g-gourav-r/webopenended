@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Evade Hunger</title>
+        <link rel="stylesheet" href="style.css">
+       
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="#abt">About</a>
+            <a href="vol.php">volunteer</a>
+          </div>
+          <br><br><br>
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="img/1.png" width="100%" height="600">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="img/2.png" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="img/3.png" style="width:100%">
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+            <br><br><br>
+            <h1>Evade Hunger</h1>
+        <p>Please fill the details, Our Vols will get in touch with you soon !</p>
+        <form name="frmContact" class="needs-validation " action="contact.php" method="post">
+        <fieldset>
+            <label for="Fname">First Name: <input type="text" placeholder="Please enter your First Name" name="fname" id="fname" required> </label>
+            <label for="Lname">Last Name: <input type="text" placeholder="Please enter your Last Name" name="lname" id="lname" > </label>
+            <label for="mail">Email: <input type="email" placeholder="Please enter your email"name="mail" id="mail" required> </label>
+            <label for="tel">Phone Number: <input type="text"placeholder="Please enter your phone number" required name="pno" id="pno" pattern="{8,12}"> </label>
+        </fieldset>
+        <fieldset>
+            <label for="">Amount of Food to be donated : <input type="text" placeholder="Please enter the count per head"name="donno" id="donno"> </label>
+            </label>
+            <label for="">Address:
+                <textarea name="addr" id="add" cols="30" rows="3" placeholder="Please enter your full address" ></textarea>
+            </label>
+            <label for="">Pincode: <input type="text" placeholder="Please enter your pincode" name="pcode" id="pcode" required> </label>
+        </fieldset>
+        <input type="submit" value="Submit">
+        </form>
+        <br>
+        <br>
+        
+        <div class="about" id="abt">
+          <center><h3>ABOUT US</h3></center>
+          Evade Hunger is a volunteer based, zero-funds organization that works to get surplus food from restaurants and the community to serve less fortunate people.Our local chapters are run by friends and colleagues, who hope to create a difference in their own unique way. For example, restaurants in the neighbourhood Green Park, will contribute to the homeless of the locality, through volunteers who live in Green Park. Our “Robins” are largely students and young working professionals – everyone does this in their free time. The lesser fortunate sections of society we serve include homeless families, orphanages, patients from public hospitals, and old age homes.
+        </div>
+        <br><br><br><br><br><br>  
+       
+            <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 5000);
+                }
+                </script>  
+    </body>
+</html>
